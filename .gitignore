@@ -1,4 +1,4 @@
 
-*.txt
+#*.txt (commentato queta linea per drae la possibilità la file "feature.txt" di essere visibile)
 
 to_ignore.txt
