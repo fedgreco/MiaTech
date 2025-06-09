@@ -58,3 +58,7 @@ li:last-child {
 li {
     text-align: left !important;
 }
+
+#RGB {
+    color: rgb(255, 0, 0);
+}
