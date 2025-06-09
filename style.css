@@ -27,6 +27,22 @@ h5 {
     background-color: bisque;
 }
 
-.font {
+.size {
     font-size: 30px;
+}
+
+.color {
+    color: coral;
+}
+
+.style {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+font {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.grassetto {
+    font-weight: bold;
 }
