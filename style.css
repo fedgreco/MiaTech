@@ -63,7 +63,7 @@ li:last-child {
 }
 
 li {
-    text-align: left !important;
+    text-align: left;
 }
 
 #RGB {
@@ -76,4 +76,27 @@ li {
 
 #RGBA {
     color: rgba(255, 0, 0, 0.7);
+}
+
+.container h2 {
+    color: black;
+    text-align: left;
+}
+
+.container p {
+    color: black;
+    text-align: left;
+}
+.container ul {
+    color: black;
+    text-align: left;
+}
+.container li {
+    color: black;
+    text-align: left;
+}
+
+.container li:last-child {
+    font-weight: initial;
+    font-size: initial;
 }
