@@ -44,3 +44,7 @@ font {
 * {
     text-align: center;
 }
+
+a:hover {
+    color: purple;
+}
