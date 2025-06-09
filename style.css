@@ -46,3 +46,7 @@ font {
 .grassetto {
     font-weight: bold;
 }
+
+* {
+    text-align: center;
+}
