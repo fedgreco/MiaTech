@@ -62,3 +62,7 @@ li {
 #RGB {
     color: rgb(255, 0, 0);
 }
+
+#HEX {
+    color: #FF0000;
+}
