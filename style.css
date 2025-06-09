@@ -48,3 +48,13 @@ font {
 a:hover {
     color: purple;
 }
+
+li:last-child {
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+li {
+    text-align: left !important;
+}
