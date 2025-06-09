@@ -66,3 +66,7 @@ li {
 #HEX {
     color: #FF0000;
 }
+
+#RGBA {
+    color: rgba(255, 0, 0, 0.7);
+}
