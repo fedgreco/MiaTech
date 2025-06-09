@@ -1,6 +1,13 @@
 p {
     color: red;
-    text-align: right;
+}
+
+#para {
+    color: pink;
+}
+
+.grafo {
+    color: brown;
 }
 
 h1, h2 {
