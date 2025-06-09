@@ -3,24 +3,18 @@ p {
     text-align: right;
 }
 
-h1 {
+h1, h2 {
     color: green;
 }
 
-h2 {
-    color: blue;
-}
 
 h3 {
-    color: purple;
+    color: black;
 }
 
-h4 {
-    color: chocolate;
-}
 
-h5 {
-    color: cadetblue;
+h4, h5 {
+    color: red;
 }
 
 #sfondo {
