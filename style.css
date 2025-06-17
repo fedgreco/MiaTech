@@ -1,3 +1,7 @@
+* {
+    color: var(--colore-primario);
+}
+
 .container {
     width: 100%;
     height: 500px;
