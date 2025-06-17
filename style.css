@@ -11,6 +11,7 @@
     width: 25%;
     height: 50%;
     background-color: brown;
+    
 }
 
 .quadrato-2 {
@@ -30,4 +31,5 @@
 
 #em {
     font-size: 7em;
+    padding: var(--padding);
 }
