@@ -33,3 +33,8 @@
     font-size: 7em;
     padding: var(--padding);
 }
+
+.element {
+    padding: var(--padding);
+    background-color: burlywood;
+}
