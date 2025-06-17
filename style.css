@@ -1,102 +1,10 @@
-p {
-    color: red;
+.container {
+    width: 100%;
+    height: 500px;
 }
 
-#para {
-    color: pink;
-}
-
-.grafo {
-    color: brown;
-}
-
-h1, h2 {
-    color: green;
-}
-
-
-h3 {
-    color: black;
-}
-
-
-h4, h5 {
-    color: red;
-}
-
-#sfondo {
-    background-color: bisque;
-}
-
-.size {
-    font-size: 30px;
-}
-
-.color {
-    color: coral;
-}
-
-.style {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-font {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.grassetto {
-    font-weight: bold;
-}
-
-* {
-    text-align: center;
-}
-
-a:hover {
-    color: purple;
-}
-
-li:last-child {
-    color: blueviolet;
-    font-weight: bold;
-    font-size: 50px;
-}
-
-li {
-    text-align: left;
-}
-
-#RGB {
-    color: rgb(255, 0, 0);
-}
-
-#HEX {
-    color: #FF0000;
-}
-
-#RGBA {
-    color: rgba(255, 0, 0, 0.7);
-}
-
-.container h2 {
-    color: black;
-    text-align: left;
-}
-
-.container p {
-    color: black;
-    text-align: left;
-}
-.container ul {
-    color: black;
-    text-align: left;
-}
-.container li {
-    color: black;
-    text-align: left;
-}
-
-.container li:last-child {
-    font-weight: initial;
-    font-size: initial;
+.quadrato-1 {
+    width: 25%;
+    height: 50%;
+    background-color: brown;
 }
