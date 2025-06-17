@@ -37,4 +37,7 @@
 .element {
     padding: var(--padding);
     background-color: burlywood;
+    margin-left: 200px;
+    border: 2px black;
+    border-style: dashed;
 }
