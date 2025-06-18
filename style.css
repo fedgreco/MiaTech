@@ -41,3 +41,15 @@
     border: 2px black;
     border-style: dashed;
 }
+
+.orizzontale {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.orizzontale li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 50px;
+}
