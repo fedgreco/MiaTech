@@ -53,3 +53,30 @@
     margin-left: 20px;
     margin-top: 50px;
 }
+
+#suno {
+    width: 100px;
+    height: 100px;
+    background-color: burlywood;
+    border: 2px black;
+    border-style: dotted;
+    display: inline;
+}
+
+#sdue {
+    width: 100px;
+    height: 100px;
+    background-color: burlywood;
+    border: 2px black;
+    border-style: dotted;
+    display: inline-block;
+}
+
+#stre {
+    width: 100px;
+    height: 100px;
+    background-color: burlywood;
+    border: 2px black;
+    border-style: dotted;
+    display: block;
+}
