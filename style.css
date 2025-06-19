@@ -87,4 +87,7 @@ h4 {
     list-style: none;
 }
 
+#hidden {
+    display: none;
+}
 
