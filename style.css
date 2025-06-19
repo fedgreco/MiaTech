@@ -91,3 +91,7 @@ h4 {
     display: none;
 }
 
+.right_float img {
+    float: right;
+}
+
