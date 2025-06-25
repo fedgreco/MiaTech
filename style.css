@@ -17,3 +17,7 @@
 .container__item1 {
     flex-shrink: 0;
 }
+
+.container__item2 {
+    flex-basis: 500px;
+}
