@@ -1,8 +1,10 @@
 .container {
     background-color: cadetblue;
     width: 70%;
+    height: 300px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .container div {
