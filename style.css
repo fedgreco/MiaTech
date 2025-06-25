@@ -2,7 +2,7 @@
     background-color: cadetblue;
     width: 70%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 
 .container div {
