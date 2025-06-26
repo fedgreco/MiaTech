@@ -1,11 +1,15 @@
 .grid-container {
     background-color: cadetblue;
-    width: 100%;
     margin: 10px;
     padding: 10px;
+    row-gap: 5px;
+    column-gap: 2px;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    grid-template-rows: 100px 200px;
+    grid-template-areas: 
+    'schermo schermo schermo schermo schermo'
+    'uno due tre addizione sottrazione'
+    'quattro cinque sei moltiplicazione divisione'
+    'sette otto nove zero uguale';
     justify-content:center;
 }
 
@@ -16,5 +20,66 @@
     text-align: center;
 }
 
+.schermo {
+    grid-area: schermo;
+}
 
+.uno {
+    grid-area: uno;
+}
 
+.due {
+    grid-area: due;
+}
+
+.tre {
+    grid-area: tre;
+}
+
+.quattro {
+    grid-area: quattro;
+}
+
+.cinque {
+    grid-area: cinque;
+}
+
+.sei {
+    grid-area: sei;
+}
+
+.sette {
+    grid-area: sette;
+}
+
+.otto {
+    grid-area: otto;
+}
+
+.nove {
+    grid-area: nove;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.addizione {
+    grid-area: addizione;
+}
+
+.sottrazione {
+    grid-area: sottrazione;
+}
+
+.moltiplicazione {
+    grid-area: moltiplicazione;
+}
+
+.divisione {
+    grid-area: divisione;
+}
+
+.uguale {
+    grid-area: uguale;
+}
