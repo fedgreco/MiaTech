@@ -7,12 +7,14 @@
 </head>
 <body>
     <script>
-        let number = 3;
-        console.log(number);
+        let outside = 9;
         {
-            number = 10;
-            console.log(number);
+            let inside = 12;
+            console.log(outside); //all'interno del blocco la stampa della variabile esterna al blocco, outside, viene eseguita
+            console.log(inside); 
         }
+        console.log(outside);
+        console.log(inside); // all'esterno del blocco, la stampa della variabile interna al blocco, inside, non viene eseguita
     </script>
 </body>
 </html>
