@@ -1,1 +1,2 @@
-let word = prompt('ciao');
+let word = 'ciao';
+console.log(word.length);
