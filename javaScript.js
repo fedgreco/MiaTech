@@ -1,8 +1,3 @@
-let number = 6;
+let numeri = [0, 1, 2, 3];
 
-if(number > 5) {
-    console.log('La variabile è maggiore di 5')
-} else {
-    console.log('La variabile è minore di 5')
-}
-
+console.log(numeri);
