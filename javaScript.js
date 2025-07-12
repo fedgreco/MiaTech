@@ -1,13 +1,7 @@
-let student = {
-    firstname: 'Carl',
-    age: 15,
-    grade: 10,
-    school: 'East High School'
-}
+let numbers = [1, 2, 3, 4, 5];
 
-console.log('Keys: ' + Object.keys(student));
-console.log('Values: ' + Object.values(student));
+numbers.forEach(num => console.log('Numeri presenti in numbers moltiplicati per 2 : ' + num * 2));
 
-for (let [chiave, valore] of Object.entries(student)) {
-    console.log(chiave + ': ' + valore);
-}
+let squaredNumbers = numbers.map(num => num * num);
+
+console.log('Numeri presenti in numbers al quadrato: ' + squaredNumbers);
