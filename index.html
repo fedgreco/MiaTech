@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
 </head>
+
 <body>
-    <script>
+  <script>
 
-    let score = parseInt(prompt("Inserisci il tuo punteggio (0-100):"));
+    let parole = [];
 
-    if (score >= 90 && score <= 100) {
-      console.log("voto ottimo");
-    } else if (score >= 70 && score <= 89) {
-      console.log("voto buono");
-    } else if (score >= 60 && score <= 69) {
-      console.log("voto sufficiente");
-    } else if (score <= 59) 
-      console.log("voto insufficiente");60
-      
-    
+    for (let i = 0; i < 5; i++) {
+      let parola = prompt("Inserisci una parola: ");
+      parole.push(parola);
+    }
+
+    for (let i = 0; i < parole.length; i++) {
+      if (parole[i].length % 2 !== 0) {
+        document.write(parole[i] + "<br>");
+      }
+    }
   </script>
 </body>
+
 </html>
