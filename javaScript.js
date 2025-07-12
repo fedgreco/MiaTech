@@ -6,3 +6,4 @@ let student = {
 }
 
 console.log('Keys: ' + Object.keys(student));
+console.log('Keys: ' + Object.values(student));
