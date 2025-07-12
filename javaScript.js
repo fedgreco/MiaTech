@@ -6,4 +6,8 @@ let student = {
 }
 
 console.log('Keys: ' + Object.keys(student));
-console.log('Keys: ' + Object.values(student));
+console.log('Values: ' + Object.values(student));
+
+for (let [chiave, valore] of Object.entries(student)) {
+    console.log(chiave + ': ' + valore);
+}
