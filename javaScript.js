@@ -5,5 +5,6 @@ let person = {
 }
 
 person.age = 39;
+person.job = 'Teacher';
 
-console.log(person.age);
+console.log(person.job);
