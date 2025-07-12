@@ -1,7 +1,14 @@
-let numbers = [1, 2, 3, 4, 5];
+let students = [
+  { name: "Mario", grade: 75 },
+  { name: "Djana", grade: 45 },
+  { name: "Carlo", grade: 58 },
+  { name: "Dario", grade: 90 },
+  { name: "Stefano", grade: 69 }
+];
 
-numbers.forEach(num => console.log('Numeri presenti in numbers moltiplicati per 2 : ' + num * 2));
+let passedStudents = students.filter(student => student.grade >= 60);
 
-let squaredNumbers = numbers.map(num => num * num);
+let firstFailedStudent = students.find(student => student.grade < 60);
 
-console.log('Numeri presenti in numbers al quadrato: ' + squaredNumbers);
+console.log("Studenti promossi:", passedStudents);
+console.log("Primo studente bocciato:", firstFailedStudent);
