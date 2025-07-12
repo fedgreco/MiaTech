@@ -1,4 +1,7 @@
-let numeri = [0, 1, 2, 3];
+let person = {
+    firstname: 'Dario',
+    age: 40, 
+    city: 'Cosenza'
+}
 
-numeri.reverse();
-console.log(numeri);
+console.log(person);
