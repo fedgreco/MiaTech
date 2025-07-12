@@ -4,4 +4,4 @@ let person = {
     city: 'Cosenza'
 }
 
-console.log(person);
+console.log(person.age);
