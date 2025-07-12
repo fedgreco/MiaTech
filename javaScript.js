@@ -1,12 +1,8 @@
-let person = {
-    firstname: 'Dario',
-    age: 40,
-    city: 'Cosenza'
+let student = {
+    firstname: 'Carl',
+    age: 15,
+    grade: 10,
+    school: 'East High School'
 }
 
-person.age = 39;
-person.job = 'Teacher';
-
-for (let chiave in person) {
-    console.log(chiave + ': ' + person[chiave]);
-}
+console.log('Keys: ' + Object.keys(student));
