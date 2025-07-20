@@ -17,8 +17,21 @@ class Automobile {
   descrizione() {
     return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
   }
+}
 
+class Elettrica extends Automobile {
+    constructor(marca, modello, anno, autonomia) {
+        super(marca, modello, anno);
+        this.autonomia = autonomia;
+    }
 
+    descrizione() {
+        return `Questa auto elettrica è una ${this.marca} ${this.modello} del ${this.anno}, con un'autonomia di ${this.autonomia} km.`;
+    }
+
+    ricarica(km) {
+        this.autonomia += km;
+    }
 }
 
 
