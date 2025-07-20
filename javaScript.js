@@ -1,11 +1,11 @@
-let expenses = [33, 100, 25, 69, 9, 18, 45];
+class Automobile {
+  constructor(marca, modello, anno) {
+    this.marca = marca;    // proprietà dell’oggetto
+    this.modello = modello;
+    this.anno = anno;
+  }
 
-let totalExpenses = expenses.reduce((acc, curr) => acc + curr, 0);
-
-let words = ["banana", "apple", "cherry", "date"];
-
-words.sort();
-
-console.log("Somma totale delle spese:", totalExpenses);
-console.log("Parole ordinate alfabeticamente:", words);
-
+  descrizione() {
+    return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
+  }
+}
