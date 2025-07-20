@@ -32,6 +32,16 @@ class Automobile {
         }
     }
 
+    static confrontaChilometraggio(auto1, auto2) {
+        if (auto1.chilometraggio > auto2.chilometraggio) {
+            return `${auto1.marca} ${auto1.modello} ha un chilometraggio maggiore.`;
+        } else if (auto2.chilometraggio > auto1.chilometraggio) {
+            return `${auto2.marca} ${auto2.modello} ha un chilometraggio maggiore.`;
+        } else {
+            return "Le automobili hanno lo stesso chilometraggio.";
+        }
+    }
+
     descrizione() {
         return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
     }
@@ -60,6 +70,16 @@ class Elettrica extends Automobile {
         return this._controllaChilometri();
     }
 }
+
+
+const auto1 = new Automobile("Fiat", "Panda", 2019);
+auto1.aggiungiChilometri(80000);
+
+const auto2 = new Automobile("Dacia", "Stepway", 2023);
+auto2.aggiungiChilometri(52000);
+
+console.log(Automobile.confrontaChilometraggio(auto1, auto2));
+
 
 
 
