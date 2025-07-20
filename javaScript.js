@@ -42,6 +42,12 @@ class Automobile {
         }
     }
 
+    #contatoreChiamate;
+
+    mostraNumeroChiamate() {
+        return `L'età dell'Automobile è stata richiesta ${this.#contatoreChiamate} volte.`;
+    }
+
     descrizione() {
         return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
     }
@@ -81,5 +87,9 @@ auto2.aggiungiChilometri(52000);
 console.log(Automobile.confrontaChilometraggio(auto1, auto2));
 
 
+
+console.log(auto1.mostraEta()); // prima chiamata
+console.log(auto2.mostraEta()); // seconda chiamata
+console.log(auto1.mostraNumeroChiamate());
 
 
