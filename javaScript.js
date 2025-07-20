@@ -1,17 +1,18 @@
 class Automobile {
 
     #contatoreChiamate;
-    #incrementaContatore;
 
     constructor(marca, modello, anno) {
         this.marca = marca;
         this.modello = modello;
         this.anno = anno;
         this.chilometraggio = 0;
+        this.#contatoreChiamate = 0;
     }
 
     aggiungiChilometri(km) {
-        this.chilometraggio = + km;
+        this.chilometraggio += km;
+        this.#incrementaContatore();
     }
 
     mostraChilometraggio() {
@@ -51,7 +52,7 @@ class Automobile {
     }
 
     mostraNumeroChiamate() {
-        return `L'età dell'Automobile è stata richiesta ${this.#contatoreChiamate} volte.`;
+        return `Sono stati aggiunti chilometri ${this.#contatoreChiamate} volte.`;
     }
 
     descrizione() {
@@ -90,11 +91,10 @@ auto1.aggiungiChilometri(80000);
 const auto2 = new Automobile("Dacia", "Stepway", 2023);
 auto2.aggiungiChilometri(52000);
 
-console.log(Automobile.confrontaChilometraggio(auto1, auto2));
+auto1.aggiungiChilometri(10000); 
+auto1.aggiungiChilometri(5000);  
+auto1.mostraChilometraggio();    
 
-
-console.log(auto1.mostraEta()); 
-console.log(auto2.mostraEta()); 
 console.log(auto1.mostraNumeroChiamate());
 
 
