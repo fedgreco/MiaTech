@@ -19,6 +19,11 @@ class Automobile {
   }
 }
 
+Automobile.prototype.saluta = function () {
+  return `Ciao! Sono una ${this.marca} ${this.modello}.`;
+};
+
+
 class Elettrica extends Automobile {
     constructor(marca, modello, anno, autonomia) {
         super(marca, modello, anno);
@@ -33,5 +38,6 @@ class Elettrica extends Automobile {
         this.autonomia += km;
     }
 }
+
 
 
