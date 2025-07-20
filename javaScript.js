@@ -1,4 +1,8 @@
 class Automobile {
+
+    #contatoreChiamate;
+    #incrementaContatore;
+
     constructor(marca, modello, anno) {
         this.marca = marca;
         this.modello = modello;
@@ -42,7 +46,9 @@ class Automobile {
         }
     }
 
-    #contatoreChiamate;
+    #incrementaContatore() {
+        this.#contatoreChiamate++;
+    }
 
     mostraNumeroChiamate() {
         return `L'età dell'Automobile è stata richiesta ${this.#contatoreChiamate} volte.`;
@@ -87,9 +93,8 @@ auto2.aggiungiChilometri(52000);
 console.log(Automobile.confrontaChilometraggio(auto1, auto2));
 
 
-
-console.log(auto1.mostraEta()); // prima chiamata
-console.log(auto2.mostraEta()); // seconda chiamata
+console.log(auto1.mostraEta()); 
+console.log(auto2.mostraEta()); 
 console.log(auto1.mostraNumeroChiamate());
 
 
