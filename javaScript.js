@@ -14,6 +14,16 @@ class Automobile {
     return `Chilometraggio: ${this.chilometraggio} km`;
   }
 
+  #calcolaEta() {
+    const annoCorrente = new Date().getFullYear(); 
+    return annoCorrente - this.anno;
+  }
+
+  mostraEta() {
+    const eta = this.#calcolaEta(); 
+    return `L'automobile ha ${eta} anni.`;
+  }
+
   descrizione() {
     return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
   }
@@ -38,6 +48,8 @@ class Elettrica extends Automobile {
         this.autonomia += km;
     }
 }
+
+
 
 
 
