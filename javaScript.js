@@ -16,13 +16,18 @@ class Automobile {
     }
 
     mostraContatoreChiamate() {
-    return `Il metodo aggiungiChilometri è stato chiamato ${this.#contatoreChiamate} volte.`;
-}
+        return `Il metodo aggiungiChilometri è stato chiamato ${this.#contatoreChiamate} volte.`;
+    }
 
 
     mostraChilometraggio() {
         return `Chilometraggio: ${this.chilometraggio} km`;
     }
+
+    get chilometraggioAttuale() {
+        return this.chilometraggio;
+    }
+
 
     #calcolaEta() {
         const annoCorrente = new Date().getFullYear();
@@ -93,13 +98,5 @@ class Elettrica extends Automobile {
 const auto1 = new Automobile("Fiat", "Panda", 2019);
 auto1.aggiungiChilometri(80000);
 
-const auto2 = new Automobile("Dacia", "Stepway", 2023);
-auto2.aggiungiChilometri(52000);
-
-auto1.aggiungiChilometri(10000); 
-auto1.aggiungiChilometri(5000);  
-auto1.mostraChilometraggio();    
-
-console.log(auto1.mostraContatoreChiamate());
-
+console.log(auto1.chilometraggioAttuale);
 
