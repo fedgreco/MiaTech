@@ -65,6 +65,14 @@ class Automobile {
         }
     }
 
+    static verificaIstanza(obj, classe) {
+        if (obj instanceof classe) {
+            return `L'oggetto è un'istanza di ${classe.name}.`;
+        } else {
+            return `L'oggetto NON è un'istanza di ${classe.name}.`;
+        }
+    }
+
     #incrementaContatore() {
         this.#contatoreChiamate++;
     }
@@ -124,8 +132,13 @@ class Camion extends Automobile {
 }
 
 const camion1 = new Camion("Iveco", "Stralis", 2020, 20000);
+const auto1 = new Automobile("Toyota", "Yaris", 2022);
 
-console.log(camion1.descrizione());
+console.log(auto1 instanceof Automobile);
+console.log(camion1 instanceof Camion);
+console.log(camion1 instanceof Automobile);
+console.log(auto1 instanceof Camion);
 
-camion1.carica(5000);
-camion1.carica(10000);
+console.log(Automobile.verificaIstanza(auto1, Automobile));
+console.log(Automobile.verificaIstanza(camion1, Automobile));
+console.log(Automobile.verificaIstanza(auto1, Camion));
