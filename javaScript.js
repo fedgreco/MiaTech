@@ -102,6 +102,12 @@ class Elettrica extends Automobile {
     }
 }
 
+class Camion extends Automobile {
+    constructor(marca, modello, anno) {
+        super(marca, modello, anno); 
+    }
+}
+
 
 const auto1 = new Automobile("Fiat", "Panda", 2019);
 auto1.aggiungiChilometri(80000);
