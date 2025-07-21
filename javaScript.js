@@ -15,6 +15,11 @@ class Automobile {
         this.#incrementaContatore();
     }
 
+    mostraContatoreChiamate() {
+    return `Il metodo aggiungiChilometri è stato chiamato ${this.#contatoreChiamate} volte.`;
+}
+
+
     mostraChilometraggio() {
         return `Chilometraggio: ${this.chilometraggio} km`;
     }
@@ -95,6 +100,6 @@ auto1.aggiungiChilometri(10000);
 auto1.aggiungiChilometri(5000);  
 auto1.mostraChilometraggio();    
 
-console.log(auto1.mostraNumeroChiamate());
+console.log(auto1.mostraContatoreChiamate());
 
 
