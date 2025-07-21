@@ -28,6 +28,14 @@ class Automobile {
         return this.chilometraggio;
     }
 
+    set chilometraggioAttuale(nuovoValore) {
+        if (nuovoValore >= this.chilometraggio) {
+            this.chilometraggio = nuovoValore;
+        } else {
+            console.warn(`Il nuovo chilometraggio non può essere inferiore al chilometraggio precedente, che è di ${this.chilometraggio}`);;
+        }
+    }
+
 
     #calcolaEta() {
         const annoCorrente = new Date().getFullYear();
@@ -100,3 +108,4 @@ auto1.aggiungiChilometri(80000);
 
 console.log(auto1.chilometraggioAttuale);
 
+auto1.chilometraggioAttuale = 12000;
