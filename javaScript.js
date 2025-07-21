@@ -103,15 +103,29 @@ class Elettrica extends Automobile {
 }
 
 class Camion extends Automobile {
-    constructor(marca, modello, anno) {
-        super(marca, modello, anno); 
+    constructor(marca, modello, anno, caricoMassimo) {
+        super(marca, modello, anno);
+        this.caricoMassimo = caricoMassimo;
+        this.caricoAttuale = 0;
+    }
+
+    descrizione() {
+        return `Questo camion è un ${this.marca} ${this.modello} del ${this.anno}. Può trasportare fino a ${this.caricoMassimo} kg.`;
+    }
+
+    carica(kg) {
+        if (this.caricoAttuale + kg <= this.caricoMassimo) {
+            this.caricoAttuale += kg;
+            console.log(`Caricati ${kg} kg. Carico attuale: ${this.caricoAttuale} kg.`);
+        } else {
+            console.warn(`Carico eccessivo! Non puoi caricare ${kg} kg: supereresti il limite di ${this.caricoMassimo} kg.`);
+        }
     }
 }
 
+const camion1 = new Camion("Iveco", "Stralis", 2020, 20000);
 
-const auto1 = new Automobile("Fiat", "Panda", 2019);
-auto1.aggiungiChilometri(80000);
+console.log(camion1.descrizione());
 
-console.log(auto1.chilometraggioAttuale);
-
-auto1.chilometraggioAttuale = 12000;
+camion1.carica(5000);
+camion1.carica(10000);
