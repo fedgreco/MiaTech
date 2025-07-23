@@ -11,7 +11,7 @@ let persona = {
     city: "Rome"
 }
 
-let {firstName, city} = persona;
+let {firstName: name, city: residenza} = persona;
 
-console.log(firstName);
-console.log(city);
+console.log(name);
+console.log(residenza);
