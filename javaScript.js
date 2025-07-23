@@ -1,20 +1,8 @@
 let numeri = [1, 2, 3];
 
-let [uno, due, tre, quattro = 4, cinque = 5] = numeri;
+let numeriCopia = [...numeri];
 
-console.log(uno, due, tre, quattro, cinque);
+numeri.push(4);
 
-
-let persona = {
-    firstName: "Steve",
-    age: 30,
-}
-
-let {
-    firstName,
-    age,
-    city = "boh",
-    job = "idk"
-} = persona;
-
-console.log(firstName, age, city, job);
+console.log(numeri);
+console.log(numeriCopia);
