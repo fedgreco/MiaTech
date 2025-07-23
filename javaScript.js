@@ -1,5 +1,5 @@
-let numeri = [1, 2];
+let numeri = [1, 2, 3];
 
-let [uno, due] = numeri;
+let [uno, , tre] = numeri;
 
-console.log(uno, due);
+console.log(uno, tre);
