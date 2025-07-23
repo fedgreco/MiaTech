@@ -1,8 +1,5 @@
 let numeri = [1, 2, 3];
+let altriNumeri = [4, 5, 6];
+let tuttiNumeri = [...numeri, ...altriNumeri];
 
-let numeriCopia = [...numeri];
-
-numeri.push(4);
-
-console.log(numeri);
-console.log(numeriCopia);
+console.log(tuttiNumeri);
