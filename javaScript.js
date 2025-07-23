@@ -1,5 +1,10 @@
-let numeri = [1, 2, 3];
-let altriNumeri = [4, 5, 6];
-let tuttiNumeri = [...numeri, ...altriNumeri];
+let persona = {
+    nome: "Carl",
+    age: 20,
+    hobby: "football"
+}
 
-console.log(tuttiNumeri);
+let clonePersona = {...persona, city: "Milan"};
+
+console.log(persona);
+console.log(clonePersona);
