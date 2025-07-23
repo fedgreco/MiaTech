@@ -8,10 +8,13 @@ console.log(uno, due, tre, quattro, cinque);
 let persona = {
     firstName: "Steve",
     age: 30,
-    city: "Rome"
 }
 
-let {firstName: name, city: residenza} = persona;
+let {
+    firstName,
+    age,
+    city = "boh",
+    job = "idk"
+} = persona;
 
-console.log(name);
-console.log(residenza);
+console.log(firstName, age, city, job);
