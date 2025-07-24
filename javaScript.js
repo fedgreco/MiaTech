@@ -1,15 +1,22 @@
-function dividi(numeratore, denominatore) {
-  try {
-    if (denominatore === 0) {
-      throw new Error("Errore: divisione per zero!");
-    }
+function operaSullaStringa(input) {
+    try {
+        if (typeof input !== 'string') {
+            throw new TypeError("Errore di tipo: l'input non è una stringa.");
+        }
 
-    let risultato = numeratore / denominatore;
-    console.log(`Il risultato è: ${risultato}`);
-  } catch (errore) {
-    console.error(errore.message);
-  }
+        let risultato = input.toUpperCase();
+        console.log(`Risultato: ${risultato}`);
+
+    } catch (errore) {
+        if (errore instanceof TypeError) {
+            console.error("Tipo non valido:", errore.message);
+        } else {
+            console.error("Errore generico:", errore.message);
+        }
+    }
 }
 
-dividi(30, 2);  
-dividi(3, 0);   
+operaSullaStringa("ciao");   
+operaSullaStringa(42);        
+operaSullaStringa(null);  
+operaSullaStringa(true);  
