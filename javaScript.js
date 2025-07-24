@@ -1,11 +1,6 @@
-function somma(...numeri) {
-    let totale = 0;
+let numeri = [3, 6, 9, 12, 15, 18];
 
-    for (let numero of numeri) {
-        totale += numero;
-    }
+let [primo, secondo, ...resto] = numeri;
 
-    return totale;
-}
-
-console.log(somma(3, 6, 12));
+console.log(primo, secondo);
+console.log(resto);
