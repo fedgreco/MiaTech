@@ -8,5 +8,7 @@ let persona = {
 
 let personaInJson = JSON.stringify(persona);
 
-console.log(persona);
-console.log(personaInJson);
+let altraPersonaInJson = '{"nome": "Cristian"}';
+let personaOggetto = JSON.parse(altraPersonaInJson);
+
+console.log(personaOggetto);
