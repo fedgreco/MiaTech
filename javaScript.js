@@ -6,7 +6,7 @@ let persona = {
     fav_animal: 'cat'
 }
 
-let {nome, age, ...altreInfo} = persona;
+let personaInJson = JSON.stringify(persona);
 
-console.log(nome, age);
-console.log(altreInfo);
+console.log(persona);
+console.log(personaInJson);
