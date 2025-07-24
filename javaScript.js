@@ -1,4 +1,4 @@
-setTimeout(function () {
-  console.log("Questo messaggio compare dopo 3 secondi!");
-}, 3000);
+setInterval(function () {
+  console.log("Questo messaggio compare ogni 2 secondi!");
+}, 2000);
 
