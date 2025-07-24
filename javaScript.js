@@ -1,6 +1,12 @@
-let numeri = [3, 6, 9, 12, 15, 18];
+let persona = {
+    nome: 'Frank',
+    age: 70,
+    city: 'Rende',
+    job: 'restourant owner',
+    fav_animal: 'cat'
+}
 
-let [primo, secondo, ...resto] = numeri;
+let {nome, age, ...altreInfo} = persona;
 
-console.log(primo, secondo);
-console.log(resto);
+console.log(nome, age);
+console.log(altreInfo);
