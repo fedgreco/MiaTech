@@ -1,22 +1,12 @@
-function operaSullaStringa(input) {
+function operazione() {
     try {
-        if (typeof input !== 'string') {
-            throw new TypeError("Errore di tipo: l'input non è una stringa.");
-        }
-
-        let risultato = input.toUpperCase();
-        console.log(`Risultato: ${risultato}`);
-
+        let numero = null;
+        console.log(numero.toUpperCase());
     } catch (errore) {
-        if (errore instanceof TypeError) {
-            console.error("Tipo non valido:", errore.message);
-        } else {
-            console.error("Errore generico:", errore.message);
-        }
+        console.error("Si è verificato un errore:", errore.message);
+    } finally {
+        console.log("Operazione completata, messaggio stampato");
     }
 }
 
-operaSullaStringa("ciao");   
-operaSullaStringa(42);        
-operaSullaStringa(null);  
-operaSullaStringa(true);  
+operazione();
