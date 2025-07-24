@@ -1,14 +1,15 @@
-let persona = {
-    nome: 'Frank',
-    age: 70,
-    city: 'Rende',
-    job: 'restourant owner',
-    fav_animal: 'cat'
-}
+let personeJSon = `
+[
+  { "nome": "Ciccio", "age": 30 },
+  { "nome": "Ica", "age": 26 },
+  { "nome": "Stivo", "age": 37}
+]
+`;
 
-let personaInJson = JSON.stringify(persona);
+let persone = JSON.parse(personeJSon);
 
-let altraPersonaInJson = '{"nome": "Cristian"}';
-let personaOggetto = JSON.parse(altraPersonaInJson);
+persone.push({ nome: "Cristian", età: 37 });
 
-console.log(personaOggetto);
+let personeAggiornateJSon = JSON.stringify(persone);
+
+console.log(personeAggiornateJSon);
