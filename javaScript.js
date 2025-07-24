@@ -1,10 +1,15 @@
-function stampaMessaggio() {
-    console.log("Cosa inutile");
+function dividi(numeratore, denominatore) {
+  try {
+    if (denominatore === 0) {
+      throw new Error("Errore: divisione per zero!");
+    }
+
+    let risultato = numeratore / denominatore;
+    console.log(`Il risultato è: ${risultato}`);
+  } catch (errore) {
+    console.error(errore.message);
+  }
 }
 
-let intervallo = setInterval(stampaMessaggio, 1000);
-
-setTimeout(function() {
-    clearInterval(intervallo);
-    console.log("Si nuddu miscatu ccu nenti");
-}, 5000);
+dividi(30, 2);  
+dividi(3, 0);   
