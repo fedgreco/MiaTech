@@ -1,15 +1,6 @@
-let personeJSon = `
-[
-  { "nome": "Ciccio", "age": 30 },
-  { "nome": "Ica", "age": 26 },
-  { "nome": "Stivo", "age": 37}
-]
-`;
+let nome = "Super";
+let cognome = "Mario";
 
-let persone = JSON.parse(personeJSon);
+let saluto = `Ciao ${nome} ${cognome}!`;
 
-persone.push({ nome: "Cristian", età: 37 });
-
-let personeAggiornateJSon = JSON.stringify(persone);
-
-console.log(personeAggiornateJSon);
+console.log(saluto);
