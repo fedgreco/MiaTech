@@ -1,10 +1,11 @@
-let persona = {
-    nome: "Carl",
-    age: 20,
-    hobby: "football"
+function somma(...numeri) {
+    let totale = 0;
+
+    for (let numero of numeri) {
+        totale += numero;
+    }
+
+    return totale;
 }
 
-let clonePersona = {...persona, city: "Milan"};
-
-console.log(persona);
-console.log(clonePersona);
+console.log(somma(3, 6, 12));
