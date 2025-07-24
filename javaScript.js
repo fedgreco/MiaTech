@@ -1,12 +1,17 @@
-let persona = {
-    nome: "Monkey D.",
-    cognome: "Luffy",
-    age: 20,
-    city: "Boh"
-}
-let numero = 33;
-let boolean = true;
-let arrayDiNumeri = [ 1, 2, 3, 4];
-let frase = "Questa è una stringa";
+let persone = [
+    { nome: "Carlo", età: 26, città: "Milano" },
+    { nome: "Luca", età: 30, città: "Roma" },
+    { nome: "Sara", età: 28, città: "Torino" }
+];
 
-console.log(persona, numero, boolean, arrayDiNumeri, frase);
+console.table(persone);
+
+console.group("Messaggi di Debug");
+
+console.log("Avvio dello script...");
+console.log("Array di persone creato");
+console.log("Stampata tabella con console.table");
+console.warn("Controllare che i dati siano corretti");
+console.error("Errore di esempio (solo per dimostrazione)");
+
+console.groupEnd(); 
