@@ -4,15 +4,9 @@ let persona = {
     age: 20,
     city: "Boh"
 }
+let numero = 33;
+let boolean = true;
+let arrayDiNumeri = [ 1, 2, 3, 4];
+let frase = "Questa è una stringa";
 
-function descriviPersona(persona) {
-    return `
-Nome: ${persona.nome}
-Cognome: ${persona.cognome}
-Età: ${persona.age}
-Città: ${persona.city}
-`;
-}
-
-let descrizione = descriviPersona(persona);
-console.log(descrizione);
+console.log(persona, numero, boolean, arrayDiNumeri, frase);
