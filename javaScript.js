@@ -1,10 +1,18 @@
-let nome = "Super";
-let cognome = "Mario";
-let age = 30;
-let city = "Tokyo";
+let persona = {
+    nome: "Monkey D.",
+    cognome: "Luffy",
+    age: 20,
+    city: "Boh"
+}
 
-let saluto =
- `Ciao ${nome} ${cognome}!
- Hai ${age} anni e vivi a ${city}`;
+function descriviPersona(persona) {
+    return `
+Nome: ${persona.nome}
+Cognome: ${persona.cognome}
+Età: ${persona.age}
+Città: ${persona.city}
+`;
+}
 
-console.log(saluto);
+let descrizione = descriviPersona(persona);
+console.log(descrizione);
