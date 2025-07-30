@@ -1,20 +1,12 @@
-function raddoppiaNumero(numero, callback) {
-    const risultato = numero * 2;
-    callback(risultato);
+function messaggioRisolto() {
+  return new Promise(function(resolve) { 
+    setTimeout(function() {
+      resolve("Promessa mantenuta dopo 2 secondi!");
+    }, 2000);
+  });
 }
 
-function aggiungiCinque(numero, callback) {
-    const risultato = numero + 5;
-    callback(risultato);
-}
-
-function stampaRisultato(finale) {
-    console.log("Risultato finale: " + finale);
-}
-
-raddoppiaNumero(4, function (ris1) {
-    aggiungiCinque(ris1, function (ris2) {
-        stampaRisultato(ris2);
-    });
+messaggioRisolto().then(function(messaggio) {
+  console.log(messaggio);
 });
 
