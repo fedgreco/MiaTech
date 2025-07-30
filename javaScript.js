@@ -1,12 +1,10 @@
-function operazione() {
-    try {
-        let numero = null;
-        console.log(numero.toUpperCase());
-    } catch (errore) {
-        console.error("Si è verificato un errore:", errore.message);
-    } finally {
-        console.log("Operazione completata, messaggio stampato");
-    }
+function somma(a, b, callback) {
+  const risultato = a + b; 
+  callback(risultato); 
 }
 
-operazione();
+function mostraRisultato(messaggio) {
+  console.log("Il risultato è: " + messaggio);
+}
+
+somma(5, 7, mostraRisultato);
