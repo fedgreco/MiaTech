@@ -1,12 +1,19 @@
-function messaggioRisolto() {
-  return new Promise(function(resolve) { 
-    setTimeout(function() {
-      resolve("Promessa mantenuta dopo 2 secondi!");
-    }, 2000);
-  });
+function messaggioRisolto(positivo) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            if (positivo) {
+                resolve("Promessa mantenuta dopo 2 secondi!");
+            } else {
+                reject("Promessa rifiutata: qualcosa è andato storto.");
+            }
+        }, 2000);
+    });
 }
 
-messaggioRisolto().then(function(messaggio) {
-  console.log(messaggio);
-});
-
+messaggioRisolto(false)
+    .then(function (messaggio) {
+        console.log("Successo:", messaggio);
+    })
+    .catch(function (errore) {
+        console.log("Errore:", errore);
+    });
