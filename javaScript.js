@@ -1,10 +1,10 @@
-function somma(a, b, callback) {
-  const risultato = a + b; 
-  callback(risultato); 
+function stampaRisultato(valore) {
+    console.log("Il risultato è: " + valore);
 }
 
-function mostraRisultato(messaggio) {
-  console.log("Il risultato è: " + messaggio);
+function elaboraNumero(numero, callback) {
+    const risultato = numero * 2;
+    callback(risultato);
 }
 
-somma(5, 7, mostraRisultato);
+elaboraNumero(10, stampaRisultato);
