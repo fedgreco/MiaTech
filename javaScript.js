@@ -1,19 +1,24 @@
-function messaggioRisolto(positivo) {
+function operazioneAsincrona() {
     return new Promise(function (resolve, reject) {
+        let successo = Math.random() > 0.5;
+
         setTimeout(function () {
-            if (positivo) {
-                resolve("Promessa mantenuta dopo 2 secondi!");
+            if (successo) {
+                resolve("Operazione riuscita!");
             } else {
-                reject("Promessa rifiutata: qualcosa è andato storto.");
+                reject("Operazione fallita.");
             }
         }, 2000);
     });
 }
 
-messaggioRisolto(false)
-    .then(function (messaggio) {
-        console.log("Successo:", messaggio);
+operazioneAsincrona()
+    .then(function (risultato) {
+        console.log("Successo:", risultato);
     })
     .catch(function (errore) {
         console.log("Errore:", errore);
+    })
+    .finally(function () {
+        console.log("L’operazione è terminata");
     });
