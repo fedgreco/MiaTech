@@ -1,27 +1,37 @@
-function primoTask() {
+function taskUno() {
     return new Promise(function (resolve) {
         setTimeout(function () {
-            resolve("Primo task completato in 1 s");
+            resolve("Task Uno completato");
         }, 1000);
     });
 }
 
-function secondoTask() {
-    return new Promise(function (resolve) {
+function taskDue() {
+    return new Promise(function (_, reject) {
         setTimeout(function () {
-            resolve("Secondo task completato in 2 s");
+            reject("Task Due fallito");
         }, 2000);
     });
 }
 
-Promise.race([primoTask(), secondoTask()])
-  .then(function (risultato) {
-    console.log("Il primo task completato è:", risultato);
-  })
-  .catch(function (errore) {
-    console.log("Il primo task che ha risposto è fallito:", errore);
-  });
+function taskTre() {
+    return new Promise(function (resolve) {
+        setTimeout(function () {
+            resolve("Task Tre completato");
+        }, 3000);
+    });
+}
 
-
+Promise.allSettled([taskUno(), taskDue(), taskTre()])
+    .then(function (risultati) {
+        console.log("Risultati di tutte le Promise:");
+        risultati.forEach(function (risultato, index) {
+            if (risultato.status === "fulfilled") {
+                console.log(`Task ${index + 1}: Successo →`, risultato.value);
+            } else {
+                console.log(`Task ${index + 1}: Errore →`, risultato.reason);
+            }
+        });
+    });
 
 
