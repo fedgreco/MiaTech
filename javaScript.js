@@ -1,4 +1,4 @@
-function ottieniNumero() {
+function generaNumero() {
     return new Promise(function (resolve) {
         setTimeout(function () {
             resolve(5);
@@ -6,12 +6,14 @@ function ottieniNumero() {
     });
 }
 
-ottieniNumero()
+generaNumero()
     .then(function (numero) {
-        return numero * 2;
-    })
-    .then(function (numeroMoltiplicato) {
-        return numeroMoltiplicato + 3;
+        console.log("Numero ottenuto:", numero);
+        if (numero % 2 === 0) {
+            return numero * 2;
+        } else {
+            return numero * 3;
+        }
     })
     .then(function (risultatoFinale) {
         console.log("Risultato finale:", risultatoFinale);
