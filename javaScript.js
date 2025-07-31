@@ -1,29 +1,28 @@
-function promessaCasuale() {
-    return new Promise(function (resolve, reject) {
-            const successo = Math.random() > 0.5;
-            if (successo) {
-                resolve(5); 
-            } else {
-                reject("Errore: la promessa è stata rifiutata.");
-            }
+function primoTask() {
+    return new Promise(function (resolve) {
+        setTimeout(function () {
+            resolve("🏁 Primo task completato in 1 s");
+        }, 1000);
     });
 }
 
-promessaCasuale()
-    .then(function (numero) {
-        console.log("Step 1 - Numero iniziale:", numero);
-        return numero * 2;
-    })
-    .then(function (raddoppiato) {
-        console.log("Step 2 - Numero raddoppiato:", raddoppiato);
-        return raddoppiato + 10;
-    })
-    .then(function (sommaFinale) {
-        console.log("Step 3 - Risultato finale:", sommaFinale);
+function secondoTask() {
+    return new Promise(function (resolve) {
+        setTimeout(function () {
+            resolve("🏁 Secondo task completato in 2 s");
+        }, 2000);
+    });
+}
+
+Promise.all([primoTask(), secondoTask()])
+    .then(function (risultati) {
+        console.log("Tutti i task completati:");
+        risultati.forEach((msg, i) => console.log(`Task ${i + 1}:`, msg));
     })
     .catch(function (errore) {
-        console.log("Errore nella catena:", errore);
+        console.error("Almeno un task è fallito:", errore);
     });
+
 
 
 
