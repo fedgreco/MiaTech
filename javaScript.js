@@ -1,24 +1,18 @@
-function operazioneAsincrona() {
-    return new Promise(function (resolve, reject) {
-        let successo = Math.random() > 0.5;
-
+function ottieniNumero() {
+    return new Promise(function (resolve) {
         setTimeout(function () {
-            if (successo) {
-                resolve("Operazione riuscita!");
-            } else {
-                reject("Operazione fallita.");
-            }
-        }, 2000);
+            resolve(5);
+        }, 1000);
     });
 }
 
-operazioneAsincrona()
-    .then(function (risultato) {
-        console.log("Successo:", risultato);
+ottieniNumero()
+    .then(function (numero) {
+        return numero * 2;
     })
-    .catch(function (errore) {
-        console.log("Errore:", errore);
+    .then(function (numeroMoltiplicato) {
+        return numeroMoltiplicato + 3;
     })
-    .finally(function () {
-        console.log("L’operazione è terminata");
+    .then(function (risultatoFinale) {
+        console.log("Risultato finale:", risultatoFinale);
     });
