@@ -1,19 +1,28 @@
-function verificaCondizione(condizione) {
+function promessaCasuale() {
     return new Promise(function (resolve, reject) {
-            if (condizione) {
-                resolve("Successo: la condizione è vera!");
+            const successo = Math.random() > 0.5;
+            if (successo) {
+                resolve(5); 
             } else {
-                reject("Errore: la condizione è falsa.");
+                reject("Errore: la promessa è stata rifiutata.");
             }
     });
 }
 
-verificaCondizione(false)
-    .then(function (messaggio) {
-        console.log(messaggio);
+promessaCasuale()
+    .then(function (numero) {
+        console.log("Step 1 - Numero iniziale:", numero);
+        return numero * 2;
+    })
+    .then(function (raddoppiato) {
+        console.log("Step 2 - Numero raddoppiato:", raddoppiato);
+        return raddoppiato + 10;
+    })
+    .then(function (sommaFinale) {
+        console.log("Step 3 - Risultato finale:", sommaFinale);
     })
     .catch(function (errore) {
-        console.log(errore);
+        console.log("Errore nella catena:", errore);
     });
 
 
