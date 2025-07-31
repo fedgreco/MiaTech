@@ -1,10 +1,20 @@
-function promessaFallita() {
-  return new Promise(function(resolve, reject) {
-      reject("Errore: operazione non riuscita.");
-  });
+function verificaCondizione(condizione) {
+    return new Promise(function (resolve, reject) {
+            if (condizione) {
+                resolve("Successo: la condizione è vera!");
+            } else {
+                reject("Errore: la condizione è falsa.");
+            }
+    });
 }
 
-promessaFallita()
-  .catch(function(errore) {
-    console.log(errore);
-  });
+verificaCondizione(false)
+    .then(function (messaggio) {
+        console.log(messaggio);
+    })
+    .catch(function (errore) {
+        console.log(errore);
+    });
+
+
+
