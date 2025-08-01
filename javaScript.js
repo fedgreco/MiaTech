@@ -1,16 +1,22 @@
-function promessaConRitardo() {
-    return new Promise(function (resolve) {
-        setTimeout(function () {
-            resolve("Promessa risolta dopo 2 secondi");
-        }, 2000);
+function controllaPromise(valido) {
+    return new Promise(function (resolve, reject) {
+            if (valido) {
+                resolve("Operazione riuscita");
+            } else {
+                reject("Si è verificato un errore");
+            }
     });
 }
 
-async function eseguiAsync() {
-    const messaggio = await promessaConRitardo();
-    console.log(messaggio);
+async function gestisciPromise(valido) {
+    try {
+        const risultato = await controllaPromise(valido);
+        console.log("Risultato:", risultato);
+    } catch (errore) {
+        console.error("Errore:", errore);
+    }
 }
 
-eseguiAsync();
-
+gestisciPromise(true);
+gestisciPromise(false);
 
