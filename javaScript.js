@@ -1,26 +1,13 @@
-function funzioneUno() {
-    return new Promise(function (resolve) {
-        setTimeout(function () {
-            resolve("Risultato della funzioneUno dopo 1 secondo");
-        }, 1000);
-    });
+async function fetchData() {
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+        const data = await response.json();
+        console.log("Dati ricevuti:", data);
+    } catch (error) {
+        console.error("Errore nella fetch:", error.message);
+    }
 }
 
-function funzioneDue() {
-    return new Promise(function (resolve) {
-        setTimeout(function () {
-            resolve("Risultato della funzioneDue dopo 3 secondi");
-        }, 3000);
-    });
-}
+fetchData();
 
-async function eseguiInSerie() {
-    const risultatoUno = await funzioneUno();
-    console.log(risultatoUno);
-
-    const risultatoDue = await funzioneDue();
-    console.log(risultatoDue);
-}
-
-eseguiInSerie();
 
