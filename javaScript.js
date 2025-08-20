@@ -1,4 +1,4 @@
-const paragrafo = document.querySelector("#paragrafo");
+const paragrafo = document.getElementById("paragrafo");
 
 paragrafo.innerText = "Questo è un paragrafo";
 
