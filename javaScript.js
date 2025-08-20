@@ -1,6 +1,6 @@
 const paragrafo = document.querySelector("#paragrafo");
 
-paragrafo.innerText = "Questo è un paragrafo";
+paragrafo.innerText = "Questo è un paragrafo esattamente come lo era prima";
 
 
 
