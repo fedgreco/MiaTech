@@ -1,12 +1,16 @@
-const setCookie = (name, value) => {
-    const data = new Date();
-    data.setTime(data.getTime() + 24*60*60*1000);
-    const expires = "Expires=" + data.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + "; path=/";
-}
+const setButton = document.querySelector("#set-button");
+const game = document.querySelector("#game");
 
-setCookie("id", "ica");
-console.log("Cookies:" + document.cookie);
+setButton.addEventListener("click", () => {
+    const gameName = prompt("Qual è il tuo gioco preferito?");
+    localStorage.setItem("my_fav_game", gameName);
+    game.innerText = gameName;
+})
+
+const gameName = localStorage.getItem("my_fav_game") || "";
+game.innerText = gameName;
+
+localStorage.removeItem("my_fav_game");
 
 
 
