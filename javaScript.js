@@ -1,17 +1,12 @@
-async function fetchConProxy() {
-    const urlOriginale = "https://api.chucknorris.io/jokes/random";
-    const proxyUrl = "https://api.allorigins.win/raw?url=" + encodeURIComponent(urlOriginale);
-
-    try {
-        const response = await fetch(proxyUrl);
-        const data = await response.json();
-        console.log("Battuta di Chuck Norris:", data.value);
-    } catch (error) {
-        console.error("Errore con il proxy:", error.message);
-    }
+const setCookie = (name, value) => {
+    const data = new Date();
+    data.setTime(data.getTime() + 24*60*60*1000);
+    const expires = "Expires=" + data.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + "; path=/";
 }
 
-fetchConProxy();
+setCookie("id", "ica");
+console.log("Cookies:" + document.cookie);
 
 
 
