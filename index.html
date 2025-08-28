@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'red',
+                    },
+                },
+            },
+        }
+    </script>
 </head>
 <body>
-    <div class="container md mx-auto m-2 border-4 border-black rounded bg-gray-300">
+    <div class="container md mx-auto m-2 border-4 border-black rounded bg-gray-300 text-primary">
         <p class="p-4 m-3 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officia, aliquid expedita odio quibusdam debitis aut dolorum quis. Odio, sequi!</p>
     </div>
 </body>
