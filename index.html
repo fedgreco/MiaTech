@@ -9,31 +9,40 @@
     <script>
         tailwind.config = {
             theme: {
-                //manca extend, ma se voglio rimuovere del tutto il tema di default e usare solo il mio personalizzato, posso rimuovere extend e usare direttamente theme
-                colors: {
-                    primary: 'red',
-                },
-                fontFamily: {
-                    style: ['Courier New', 'monospace'],
-                },
-                fontSize: {
-                    size: '2rem',
-                },
-                spacing: {
-                    small: '1rem',
-                    medium: '3rem',
-                    large: '6rem',
-                },
+                extend: {
+                    colors: {
+                        primary: '#9671DE',
+                        secondary: '#F0F0F0',
+                    },
+                    fontFamily: {
+                        style: ['Courier New', 'monospace'],
+                    },
+                    fontSize: {
+                        size: '2rem',
+                    },
+                    spacing: {
+                        small: '1rem',
+                        medium: '3rem',
+                        large: '6rem',
+                    },
+                },    
             },
         }
     </script>
 </head>
 
 <body>
-    <div class="container md mx-auto m-2 border-4 border-black rounded bg-gray-300 text-primary">
-        <p class="p-small m-small text-center font-style text-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officia,
-            aliquid expedita odio quibusdam debitis aut dolorum quis. Odio, sequi!</p>
-    </div>
+    <div class="container mx-auto flex justify-center">
+    <button class="p-4 m-2 bg-primary text-secondary font-style rounded-lg shadow-md">
+      Bottone 1
+    </button>
+    <button class="p-4 m-2 bg-primary text-secondary font-style rounded-lg shadow-md">
+      Bottone 2
+    </button>
+    <button class="p-4 m-2 bg-primary text-secondary font-style rounded-lg shadow-md">
+      Bottone 3
+    </button>
+  </div>
 </body>
 
 </html>
