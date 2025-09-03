@@ -32,18 +32,54 @@
     </script>
 </head>
 
-<body>
+<body class="bg-white text-black dark:bg-zinc-700 dark:text-white min-h-screen flex flex-col">
 
-    <div class="bg-white text-black dark:bg-gray-900 dark:text-white container mx-auto mt-10">
-        <h1
-            class="place-self-center text-4xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-            <a href="https://google.com">Lorem ipsum dolor sit amet.</a>
-        </h1>
-        <p class="m-2 text-indigo-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ullam minus
-            cupiditate ducimus distinctio optio maxime ipsa quod nam aliquid, dicta error rerum mollitia ipsum nisi,
-            sit, laboriosam vero hic doloribus. Ducimus mollitia nobis provident minus rem quidem beatae cumque dicta ad
-            sed ullam repudiandae voluptates iure, explicabo illo delectus?</p>
+  <header class="p-6 text-center shadow-md">
+    <h1 class="text-3xl font-bold">Sito</h1>
+  </header>
+
+  <main class="flex flex-1 items-center justify-between p-6 gap-6">
+    <!-- Testo sinistro -->
+    <div class="w-1/3">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra, ex sed dapibus 
+        gravida, velit orci aliquet lectus, vitae varius magna nibh at risus. Suspendisse potenti. 
+        Phasellus facilisis magna ac erat posuere, vitae tristique eros tristique. Curabitur 
+        bibendum malesuada lacus, non luctus metus. Duis sit amet eros magna. Donec nec neque 
+        volutpat, tincidunt neque vitae, tincidunt lectus. Aenean id massa quis nisi commodo 
+        consectetur. Vestibulum aliquet tortor vel justo sodales, sit amet suscipit magna cursus. 
+        Cras sodales purus quis sapien suscipit, nec tristique lacus convallis. Nulla id imperdiet 
+        libero. Maecenas ac metus lacinia, luctus magna non, pharetra neque.
+      </p>
     </div>
+
+    <!-- Immagine centrale -->
+    <div class="w-1/3 flex justify-center">
+      <img src="https://live.staticflickr.com/2007/2314803134_9200633617_b.jpg" alt="cerchio" class="rounded shadow-lg">
+    </div>
+
+    <!-- Testo destro -->
+    <div class="w-1/3">
+      <p>
+        Sed cursus, orci in condimentum finibus, risus lacus tincidunt mi, nec malesuada felis 
+        mauris at leo. Integer pretium sem ut metus vestibulum, ac posuere nibh vehicula. Nullam 
+        dictum convallis neque, at finibus turpis malesuada at. Suspendisse in iaculis ex, vel 
+        egestas sapien. Morbi viverra pretium libero, in vehicula neque efficitur eget. Aliquam 
+        sit amet viverra tortor. Duis commodo tristique erat sit amet posuere. Curabitur 
+        ullamcorper varius libero, eget bibendum velit fermentum a. Etiam tincidunt elit ac 
+        gravida malesuada. Praesent non libero ac nulla lacinia suscipit vel non quam. Quisque 
+        pulvinar, sapien sed semper sollicitudin, libero augue aliquam ligula, eget consequat 
+        dolor nisl in lacus.
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="p-6 flex justify-between items-center shadow-md">
+    <a href="#" class="hover:text-violet-600">Link Sinistra</a>
+    <a href="#" class="hover:text-violet-600">Link Centro</a>
+    <a href="#" class="hover:text-violet-600">Link Destra</a>
+  </footer>
 
 </body>
 
