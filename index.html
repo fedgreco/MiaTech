@@ -30,13 +30,22 @@
             },
         }
     </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn {
+                border: 2px solid gray;
+                padding: 5px 10px;
+                border-radius: 4px;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-white text-black dark:bg-zinc-700 dark:text-white min-h-screen flex flex-col">
 
     <header class="p-6 text-center shadow-md">
         <h1 class="text-3xl font-bold">Sito</h1>
-        <button id="darkModeToggle" class="border px-4 py-1 curser-pointer hover:bg-gray-400 active:bg-gray-600">Dark
+        <button id="darkModeToggle" class="btn">Dark
             Mode: <span id="darkModeStatus">Inactive</span></button>
     </header>
 
