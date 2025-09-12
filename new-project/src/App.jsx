@@ -15,10 +15,17 @@ const App = () => {
     })
   }
 
+  const handleResetButton = () => {
+    setCounter((_counter) => {
+      return _counter = 0;
+    })
+  }
+
   return (
       <div>
         <button onClick={handleAddButton}>ADD</button>
         <button onClick={handleSubButton}>SUB</button>
+        <button onClick={handleResetButton}>RESET</button>
         <p>
           Counter: {counter}
         </p>
