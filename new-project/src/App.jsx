@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const App = () => {
   const [counter, setCounter] = useState(0);
@@ -21,8 +21,14 @@ const App = () => {
     })
   }
 
+  useEffect(() => {
+  }, [counter]);
+
   return (
       <div>
+        <h1>
+          Titolo che si aggiorna con il valore di counter: {counter}
+        </h1>
         <button onClick={handleAddButton}>ADD</button>
         <button onClick={handleSubButton}>SUB</button>
         <button onClick={handleResetButton}>RESET</button>
