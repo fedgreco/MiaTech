@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const App = () => {
   const [counter, setCounter] = useState(0);
-
+  
   const handleAddButton = () => {
     setCounter((_counter) => {
       return _counter + 1;
@@ -21,6 +21,10 @@ const App = () => {
     })
   }
 
+  const handleInput = (event) => {
+    console.log(event.target.value);
+  }
+
   useEffect(() => {
   }, [counter]);
 
@@ -35,6 +39,7 @@ const App = () => {
         <p>
           Counter: {counter}
         </p>
+        <input type="text" onInput={handleInput}></input>
       </div>
   )
 }
