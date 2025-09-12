@@ -42,7 +42,7 @@ const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log(form);
+    alert(`Email: ${form.email}\nPassword: ${form.password}`);
 
     setForm({
       email: "",
