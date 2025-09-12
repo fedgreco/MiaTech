@@ -1,15 +1,11 @@
-import { Component } from "react";
+import React, { useState } from "react";
 
-class App extends Component {
+const App = () => {
+  const [counter, setCounter] = useState(1);
 
-  render() {
-    return (
-        <>
-          <p>Hello World!</p>
-        </>
-    )
-  }
-
+  return (
+    <div>Count: 0</div>
+  )
 }
 
 export default App;
