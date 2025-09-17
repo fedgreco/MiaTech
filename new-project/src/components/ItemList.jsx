@@ -1,11 +1,12 @@
-const ItemList = () => {
-  const data = ["Zelda", "Super Mario", "Pac-Man", "Star Wars"];
+const ItemList = (props) => {
+  
+  console.log(props);
   
   return (
     <>
       <ul>
         {
-          data.map((game, index) => (
+          props.data.map((game, index) => (
             <li key={`games-item-${index}`}>{game}</li>
           ))
         }
