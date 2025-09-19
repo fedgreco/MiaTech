@@ -58,3 +58,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.card {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid green;
+  border-radius: 3px;
+}

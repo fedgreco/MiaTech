@@ -1,10 +1,9 @@
-import ItemList from "./components/ItemList";
+import Card from "./components/Card";
 
 const App = () => {
-    const games = ["Zelda", "Super Mario", "Pac-Man", "Star Wars"];
     return (
         <>
-            <ItemList data={games} />
+            <Card />
         </>
     )
 }
