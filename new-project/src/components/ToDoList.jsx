@@ -1,7 +1,11 @@
+import { useState } from "react";
 import useFetch from "./useFetch";
+import useFilteredTodos from "./useFilteredTodos";
 
 const ToDoList = () => {
+    const [searchTodo, setSearchTodo] = useState("");
     const {loading, error, data} = useFetch("https://jsonplaceholder.typicode.com/todos");
+    const filteredTodos = useFilteredTodos(data, searchTodo);
 
     if(error) {
         return (
@@ -17,9 +21,14 @@ const ToDoList = () => {
 
     return (
         <>
-            <pre>
-                {JSON.stringify(data, null, 2)}
-            </pre>
+            <input type="text" onChange={(event) => setSearchTodo(event.target.value)}/>
+            <ul>
+                {
+                    filteredTodos?.map((item) => {
+                        return <li>{item.title}</li>
+                    })
+                }
+            </ul>
         </>
     )
 }
