@@ -1,9 +1,11 @@
-const UncontrolledInput = () => {
+import { useRef } from "react";
 
+const UncontrolledInput = () => {
+    const inputRef = useRef();
 
     return (
         <>
-            <input type="text"/>
+            <input type="text" ref={inputRef} />
         </>
     )
 }
