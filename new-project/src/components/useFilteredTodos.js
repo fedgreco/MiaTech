@@ -14,6 +14,7 @@ const useFilteredTodos = (data, search) => {
         handleFilter();
     }, [data, search]);
 
+
     return filteredData;
 }
 

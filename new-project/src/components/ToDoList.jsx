@@ -1,19 +1,31 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useFetch from "./useFetch";
 import useFilteredTodos from "./useFilteredTodos";
 
 const ToDoList = () => {
     const [searchTodo, setSearchTodo] = useState("");
-    const {loading, error, data} = useFetch("https://jsonplaceholder.typicode.com/todos");
+    const inputRef = useRef();
+    const { loading, error, data } = useFetch("https://jsonplaceholder.typicode.com/todos");
     const filteredTodos = useFilteredTodos(data, searchTodo);
 
-    if(error) {
+    //const handleSearchChange = useCallback((event) => {
+    //  setSearchTodo(event.target.value);
+    // }, [setSearchTodo]);
+
+    useEffect(() => {
+        if (!loading && inputRef.current) { //per poter usare inputRef e far si che il focus sulla barra di ricerca avvenga, loading deve diventare false, ovvero il caricamento dei dati deve terminare e allora input è nel DOM e inputRef.current esiste
+            inputRef.current.focus();
+        }
+    }, [loading]);
+
+
+    if (error) {
         return (
             <p>Error: {error}</p>
         )
     }
 
-    if(loading) {
+    if (loading) {
         return (
             <p>Loading...</p>
         )
@@ -21,11 +33,11 @@ const ToDoList = () => {
 
     return (
         <>
-            <input type="text" onChange={(event) => setSearchTodo(event.target.value)}/>
+            <input type="text" onChange={(event) => setSearchTodo(event.target.value)} ref={inputRef} />
             <ul>
                 {
                     filteredTodos?.map((item) => {
-                        return <li>{item.title}</li>
+                        return <li key={item.title}>{item.title}</li>
                     })
                 }
             </ul>
