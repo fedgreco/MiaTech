@@ -1,13 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import useFetch from "./useFetch";
 import useFilteredTodos from "./useFilteredTodos";
+import { ToDoContext } from "../context/ToDoContext";
 
 const ToDoList = () => {
     const [searchTodo, setSearchTodo] = useState("");
     const inputRef = useRef();
-    const { loading, error, data } = useFetch("https://jsonplaceholder.typicode.com/todos");
+    // const { loading, error, data } = useFetch("https://jsonplaceholder.typicode.com/todos");
+    const [loading, error, data] = useContext(ToDoContext);
     const filteredTodos = useFilteredTodos(data, searchTodo);
-
     //const handleSearchChange = useCallback((event) => {
     //  setSearchTodo(event.target.value);
     // }, [setSearchTodo]);
