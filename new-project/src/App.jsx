@@ -1,10 +1,16 @@
+import { Route, Routes } from "react-router-dom";
 import ToDoList from "./components/ToDoList";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 const App = () => {
     
     return (
         <>
-            <ToDoList />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+            </Routes>
         </>
     )
 }
