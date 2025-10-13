@@ -1,17 +1,16 @@
 import { Route, Routes } from "react-router-dom";
-import ToDoList from "./components/ToDoList";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Navbar from "./components/NavBar";
-
+import PublicLayout from "./Layouts/PublicLayout";
 const App = () => {
-    
+
     return (
         <>
-            <Navbar />
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
+                <Route path="/" element={<PublicLayout />}>
+                    <Route path="" element={<Home />} />
+                    <Route path="about" element={<About />} />
+                </Route>
             </Routes>
         </>
     )
