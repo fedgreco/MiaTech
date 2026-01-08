@@ -2,9 +2,11 @@ import type { Todo } from "./types";
 
 const todos: Todo[] = [];
 
+let nextId = 1;
+
 const addTodo = (title: string): Todo => {
     const newTodo: Todo = {
-        id: Date.now(),
+        id: nextId++,
         title,
         completed: false,
     };
@@ -25,10 +27,17 @@ const assignTodoToUser = (todoId: number, userId: number): Todo | undefined => {
     return todo;
 };
 
+const getUserTodos = (userId: number): Todo[] => {
+    return todos.filter((t) => t.userId === userId);
+};
 
-const todoOne = addTodo("ciao");
-const todoTwo = addTodo("wella");
+const t1 = addTodo("ciao");
+const t2 = addTodo("wella");
+const t3 = addTodo("hola");
 
-assignTodoToUser(todoOne.id, 42);
+assignTodoToUser(t1.id, 1);
+assignTodoToUser(t2.id, 1);
+assignTodoToUser(t3.id, 2);
 
-console.log(todos);
+console.log(getUserTodos(1));
+console.log(getUserTodos(2)); 
