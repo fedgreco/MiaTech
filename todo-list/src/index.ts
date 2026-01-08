@@ -1,2 +1,3 @@
-const message: string = "scemo chi legge";
-console.log(message);
+import type { Todo } from "./types";
+
+const todos: Todo[] = [];
