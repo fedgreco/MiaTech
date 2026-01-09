@@ -1,15 +1,15 @@
-import type { Todo } from "./types";
+import type { Todo, TodoWithMetadata } from "./types";
 
 const todos: Todo[] = [];
 
 let nextId = 1;
 
-const addTodo = (title: string, metadata?: any): Todo => {
-    const newTodo: Todo = {
+const addTodo = (title: string, metadata?: string | object): TodoWithMetadata => {
+    const newTodo: TodoWithMetadata = {
         id: nextId++,
         title,
         completed: false,
-        metadata,
+        metadata
     };
 
     todos.push(newTodo);
@@ -48,7 +48,7 @@ addTodo("Fare la spesa", {
     createdAt: new Date(),
 });
 
-console.log(todos)
+ console.log(todos)
 
 const error = (message: string): never => {
     throw new Error(message);
