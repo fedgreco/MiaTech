@@ -45,3 +45,17 @@ const getUserTodos = (userId: number): Todo[] => {
 const error = (message: string): never => {
     throw new Error(message);
 };
+
+const parseInput = (input: unknown): string => {
+    if (typeof input === "string") {
+        return input;
+    }
+
+    if (typeof input === "number") {
+        return input.toString();
+    }
+
+    return error("Tipo di input non supportato");
+};
+
+//console.log(parseInput("ciao")
