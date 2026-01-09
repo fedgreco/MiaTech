@@ -1,4 +1,4 @@
-import type { Todo, TodoWithMetadata } from "./types";
+import type { Todo, TodoWithMetadata, User, Project } from "./types";
 
 const todos: Todo[] = [];
 
@@ -40,6 +40,36 @@ const getTodoSummary = (todo: Todo): [string, boolean] => {
     return [todo.title, todo.completed];
 };
 
+const createProject = (name: string, users: User[], todos: Todo[]): Project => {
+    return {
+        users,
+        todos
+    };
+};
+
+const user1: User = {
+    id: 1,
+    name: "Dario",
+    todos: [],
+};
+
+const user2: User = {
+    id: 2,
+    name: "Carlo",
+    todos: [],
+};
+
+const todo1 = addTodo("Andare a fare la spesa");
+const todo2 = addTodo("Raccogliere il bucato");
+
+const project = createProject(
+    "Corso TypeScript",
+    [user1, user2],
+    [todo1, todo2]
+);
+
+console.log(project);
+
 
 // const t1 = addTodo("ciao");
 // const t2 = addTodo("wella");
@@ -77,7 +107,7 @@ const getTodoSummary = (todo: Todo): [string, boolean] => {
 
 //console.log(parseInput("ciao")
 
-const todo1 = addTodo("Studiare TypeScript");
+// const todo1 = addTodo("Studiare TypeScript");
 
-const summary = getTodoSummary(todo1);
-console.log(summary); 
+// const summary = getTodoSummary(todo1);
+// console.log(summary); 
