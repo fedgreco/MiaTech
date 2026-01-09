@@ -36,6 +36,11 @@ const updateTodo: Partial<TodoWithMetadata> = {
     title: ""
 };
 
+const getTodoSummary = (todo: Todo): [string, boolean] => {
+    return [todo.title, todo.completed];
+};
+
+
 // const t1 = addTodo("ciao");
 // const t2 = addTodo("wella");
 // const t3 = addTodo("hola");
@@ -47,27 +52,32 @@ const updateTodo: Partial<TodoWithMetadata> = {
 // console.log(getUserTodos(1));
 // console.log(getUserTodos(2)); 
 
-addTodo("Fare la spesa", {
-    priority: "alta",
-    createdAt: new Date(),
-});
+// addTodo("Fare la spesa", {
+//     priority: "alta",
+//     createdAt: new Date(),
+// });
 
- console.log(todos)
+// console.log(todos)
+///////////////////////////////////////////
+// const error = (message: string): never => {
+//     throw new Error(message);
+// };
 
-const error = (message: string): never => {
-    throw new Error(message);
-};
+// const parseInput = (input: unknown): string => {
+//     if (typeof input === "string") {
+//         return input;
+//     }
 
-const parseInput = (input: unknown): string => {
-    if (typeof input === "string") {
-        return input;
-    }
+//     if (typeof input === "number") {
+//         return input.toString();
+//     }
 
-    if (typeof input === "number") {
-        return input.toString();
-    }
-
-    return error("Tipo di input non supportato");
-};
+//     return error("Tipo di input non supportato");
+// };
 
 //console.log(parseInput("ciao")
+
+const todo1 = addTodo("Studiare TypeScript");
+
+const summary = getTodoSummary(todo1);
+console.log(summary); 
