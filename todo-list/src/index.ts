@@ -4,11 +4,12 @@ const todos: Todo[] = [];
 
 let nextId = 1;
 
-const addTodo = (title: string): Todo => {
+const addTodo = (title: string, metadata?: any): Todo => {
     const newTodo: Todo = {
         id: nextId++,
         title,
         completed: false,
+        metadata,
     };
 
     todos.push(newTodo);
@@ -41,6 +42,13 @@ const getUserTodos = (userId: number): Todo[] => {
 
 // console.log(getUserTodos(1));
 // console.log(getUserTodos(2)); 
+
+addTodo("Fare la spesa", {
+    priority: "alta",
+    createdAt: new Date(),
+});
+
+console.log(todos)
 
 const error = (message: string): never => {
     throw new Error(message);
