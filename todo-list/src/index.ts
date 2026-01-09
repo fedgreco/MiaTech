@@ -32,6 +32,10 @@ const getUserTodos = (userId: number): Todo[] => {
     return todos.filter((t) => t.userId === userId);
 };
 
+const updateTodo: Partial<TodoWithMetadata> = {
+    title: ""
+};
+
 // const t1 = addTodo("ciao");
 // const t2 = addTodo("wella");
 // const t3 = addTodo("hola");
