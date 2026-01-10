@@ -31,3 +31,5 @@ export interface Project {
 export type PartialTodo = {
     [K in keyof Todo]?: Todo[K];
 };
+
+export type TodoRecord = Record<number, Todo>;

@@ -1,4 +1,4 @@
-import type { Todo, PartialTodo } from "./types";
+import type { Todo, PartialTodo, TodoRecord } from "./types";
 
 export function filterTodos<T extends Todo>(
     todos: T[],
@@ -20,4 +20,11 @@ export function updatePartialTodo(
 
     Object.assign(todo, updates);
     return todo;
-}
+};
+
+export function convertArrayToRecord(todos: Todo[]): TodoRecord {
+    return todos.reduce<TodoRecord>((acc, todo) => {
+        acc[todo.id] = todo;
+        return acc;
+    }, {});
+};
