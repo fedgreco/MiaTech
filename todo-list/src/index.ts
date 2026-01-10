@@ -1,4 +1,5 @@
-import { type Todo, type TodoWithMetadata, type User, type Project, TodoStatus } from "./types";
+import { type Todo, type TodoWithMetadata, type Project, TodoStatus } from "./types";
+import { User } from "./User";
 
 const todos: Todo[] = [];
 
@@ -41,12 +42,12 @@ const getTodoSummary = (todo: Todo): [string, boolean] => {
     return [todo.title, todo.completed];
 };
 
-const createProject = (name: string, users: User[], todos: Todo[]): Project => {
-    return {
-        users,
-        todos
-    };
-};
+// const createProject = (name: string, users: User[], todos: Todo[]): Project => {
+//     return {
+//         users,
+//         todos
+//     };
+// };
 
 const updateTodoStatus = (todoId: number, status: TodoStatus): Todo | undefined => {
     const todo = todos.find((t) => t.id === todoId);
@@ -59,14 +60,12 @@ const updateTodoStatus = (todoId: number, status: TodoStatus): Todo | undefined 
     return todo;
 };
 
-const todo11 = addTodo("Studiare TypeScript");
+// const todo11 = addTodo("Studiare TypeScript");
 
-updateTodoStatus(todo11.id, TodoStatus.InProgress);
-updateTodoStatus(todo11.id, TodoStatus.Completed);
+// updateTodoStatus(todo11.id, TodoStatus.InProgress);
+// updateTodoStatus(todo11.id, TodoStatus.Completed);
 
-console.log(todo11.status);
-
-
+// console.log(todo11.status);
 
 // const user1: User = {
 //     id: 1,
