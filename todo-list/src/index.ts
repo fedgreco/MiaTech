@@ -60,6 +60,28 @@ const updateTodoStatus = (todoId: number, status: TodoStatus): Todo | undefined 
     return todo;
 };
 
+const user1 = new User(1, "Dario");
+const user2 = new User(2, "Carlo", "carlo@mail.it");
+
+const todo1: Todo = {
+    id: 1,
+    title: "Studiare TypeScript",
+    completed: false,
+    status: TodoStatus.Pending,
+};
+
+const todo2: Todo = {
+    id: 2,
+    title: "Fare la spesa",
+    completed: false,
+    status: TodoStatus.Pending,
+};
+user1.addTodo(todo1);
+user2.addTodo(todo2);
+
+console.log(user1.todos);
+console.log(user2.todos);
+
 // const todo11 = addTodo("Studiare TypeScript");
 
 // updateTodoStatus(todo11.id, TodoStatus.InProgress);
