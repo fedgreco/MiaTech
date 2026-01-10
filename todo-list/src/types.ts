@@ -1,8 +1,15 @@
+export enum TodoStatus {
+    Pending,
+    InProgress,
+    Completed
+};
+
 export interface Todo {
     id: number,
     title: string,
     completed: boolean,
     userId?: number,
+    status: TodoStatus,
 };
 
 export interface TodoWithMetadata extends Todo {
@@ -19,4 +26,4 @@ export interface User {
 export interface Project {
     users: User[],
     todos: Todo[]
-}
+};
