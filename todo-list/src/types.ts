@@ -27,3 +27,7 @@ export interface Project {
     users: User[],
     todos: Todo[]
 };
+
+export type PartialTodo = {
+    [K in keyof Todo]?: Todo[K];
+};
