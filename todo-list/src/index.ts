@@ -48,28 +48,48 @@ const createProject = (name: string, users: User[], todos: Todo[]): Project => {
     };
 };
 
-const user1: User = {
-    id: 1,
-    name: "Dario",
-    todos: [],
+const updateTodoStatus = (todoId: number, status: TodoStatus): Todo | undefined => {
+    const todo = todos.find((t) => t.id === todoId);
+
+    if (!todo) {
+        return undefined;
+    }
+
+    todo.status = status;
+    return todo;
 };
 
-const user2: User = {
-    id: 2,
-    name: "Carlo",
-    todos: [],
-};
+const todo11 = addTodo("Studiare TypeScript");
 
-const todo1 = addTodo("Andare a fare la spesa");
-const todo2 = addTodo("Raccogliere il bucato");
+updateTodoStatus(todo11.id, TodoStatus.InProgress);
+updateTodoStatus(todo11.id, TodoStatus.Completed);
 
-const project = createProject(
-    "Corso TypeScript",
-    [user1, user2],
-    [todo1, todo2]
-);
+console.log(todo11.status);
 
-console.log(project);
+
+
+// const user1: User = {
+//     id: 1,
+//     name: "Dario",
+//     todos: [],
+// };
+
+// const user2: User = {
+//     id: 2,
+//     name: "Carlo",
+//     todos: [],
+// };
+
+// const todo1 = addTodo("Andare a fare la spesa");
+// const todo2 = addTodo("Raccogliere il bucato");
+
+// const project = createProject(
+//     "Corso TypeScript",
+//     [user1, user2],
+//     [todo1, todo2]
+// );
+
+//console.log(project);
 
 
 // const t1 = addTodo("ciao");
@@ -81,7 +101,7 @@ console.log(project);
 // assignTodoToUser(t3.id, 2);
 
 // console.log(getUserTodos(1));
-// console.log(getUserTodos(2)); 
+// console.log(getUserTodos(2));
 
 // addTodo("Fare la spesa", {
 //     priority: "alta",
